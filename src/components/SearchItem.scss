@@ -1,0 +1,67 @@
+.searchItem {
+  width: 85%;
+  padding: 10px 30px;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+
+  > .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    > .flag {
+      display: block;
+      min-width: 40px; width: 40px; height: 40px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid #aaa;
+      border-radius: 999px;
+      margin-right: 20px;
+    }
+    > .label {
+      margin: 0;
+    }
+  }
+  > .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    > .exactMatch {
+      display: flex;
+      width: 25px;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: hidden;
+      transition: width 0.2s ease-out;
+      user-select: none;
+
+      > .icon {
+        min-width: 25px; width: 25px; height: 25px;
+      }
+      > .label {
+        width: 95px; height: 25px;
+        line-height: 25px;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+
+    > .right {  
+      > .exactMatch {
+        width: 130px;
+      }
+    }
+  }
+}

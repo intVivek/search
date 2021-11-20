@@ -17,7 +17,7 @@ export default function SearchPage() {
 		{ search } = useParams(),
 		[loaded, setLoaded] = useState(false),
 		[pageNum, setPageNum] = useState(1),
-		{ isLoading, error, APIdata, hasMore } = useFetch({ search: decodeURIComponent(search || ''), pageNum }, 'http://localhost:5000/keyword'),
+		{ isLoading, APIdata, hasMore } = useFetch({ search: decodeURIComponent(search || ''), pageNum }, 'https://search-queries.herokuapp.com/keyword'),
 
 
 		onSearch = (event) => {

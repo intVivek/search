@@ -14,9 +14,8 @@ const useFetch = (data, url) => {
 		setIsLoading(true);
 		setError(false);
 		data.search &&
-		fetch(url, {
-			method: "post",
-			body: JSON.stringify(data),
+		fetch(`${url}?search=${data.search}&page=${data.pageNum}`, {
+			method: "get",
 			headers: { "Content-type": "application/json" }
 		}).then(function (response) {
 			return response.json(data);

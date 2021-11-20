@@ -14,7 +14,7 @@ export default function SearchItem(props) {
 			</div>
 			<div className="right">
 				{
-					data.exact === 1 &&
+					data.exact === true &&
 					<div className='exactMatch'>
 						<Star className='icon' />
 						<p className='label' >Exact Match</p>

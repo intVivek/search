@@ -63,23 +63,4 @@ export default function SearchPage() {
 			{!loaded && <Loader />}
 		</div>
 	);
-
-
-	// return (
-	// 	<div className="homePageMain">
-	// 		<div className="issuePage">
-	// 			{APIdata?.map((val, index) => <div>{val.keyword}</div>)}
-	// 			<div ref={lastElementRef}></div>
-	// 			<div className="issuePageLoading">
-	// 				{
-	// 					hasMore ? "Loading..." :
-	// 						<div className="noData">
-	// 							No data Found<br />
-	// 							Search like Username/Repository. Example facebook/react-native , microsoft/vscode
-	// 						</div>
-	// 				}
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// );
 }
